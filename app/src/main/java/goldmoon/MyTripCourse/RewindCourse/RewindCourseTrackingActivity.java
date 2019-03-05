@@ -86,7 +86,7 @@ public class RewindCourseTrackingActivity extends AppCompatActivity implements V
         fbKey=courseDataIntent.getStringExtra("FBKey");
 
         daumMapView=new MapView(this);
-        daumMapView.setDaumMapApiKey("54a336d93d264308d81bf2bd1363a330");
+        daumMapView.setDaumMapApiKey(getString(R.string.daum_map_api_key));
         daumMapView.setPOIItemEventListener(this);
         daumMapViewContainer = (ViewGroup) findViewById(R.id.rewind_daum_map_view);
         daumMapViewContainer.addView(daumMapView);

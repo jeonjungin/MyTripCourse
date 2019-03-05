@@ -110,7 +110,7 @@ public class SocialCoursePostTrackingActivity extends AppCompatActivity implemen
         tg_social_tracking_my_location_btn.setOnCheckedChangeListener(this);
 
         daumMapView=new MapView(this);
-        daumMapView.setDaumMapApiKey("54a336d93d264308d81bf2bd1363a330");
+        daumMapView.setDaumMapApiKey(getString(R.string.daum_map_api_key));
         daumMapView.setPOIItemEventListener(this);
         daumMapViewContainer = (ViewGroup) findViewById(R.id.social_tracking_daum_map_view);
         daumMapViewContainer.addView(daumMapView);

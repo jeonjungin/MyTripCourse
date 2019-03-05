@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyTripCourse</string>
+    <string name="daum_map_api_key">54a336d93d264308d81bf2bd1363a330</string>
 
 </resources>

@@ -184,7 +184,7 @@ public class MapCourseTrackingActivity extends AppCompatActivity implements Loca
 
         //뷰에 지도 띄움
         daumMapView = new MapView(this);
-        daumMapView.setDaumMapApiKey("54a336d93d264308d81bf2bd1363a330");
+        daumMapView.setDaumMapApiKey(getString(R.string.daum_map_api_key));
         daumMapViewContainer = (ViewGroup) findViewById(R.id.daum_map_view);
         daumMapViewContainer.addView(daumMapView);
 
