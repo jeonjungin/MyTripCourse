@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/social_course_posts_list_view">
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="게시물이 없습니다~"
+        android:gravity="center"
+        android:id="@+id/social_course_posts_is_exist"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPur8A"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/social_course_posts_back_btn"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_button_ripple"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:src="@drawable/back_btn_black"
+
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:text="MyTripCoursePosts"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+
+            android:layout_weight="1"
+            android:gravity="center"
+
+            />
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"></LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

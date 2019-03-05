@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/daum_map_view">
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/icon_circle"
+                android:id="@+id/make_view_point_btn">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_camera"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPur"
+                    android:text="사진"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_map_course_tracking_distance"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPur"
+                    android:text="0.0km"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/icon_circle"
+                android:id="@+id/save_to_server_btn">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_save"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPur"
+                    android:text="저장"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/test_btn"
+            android:textOff="경로추적 시작"
+            android:textOn="경로추적 종료"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="@color/colorPur"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

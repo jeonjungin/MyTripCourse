@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "6081345432",
+    "firebase_url": "https://mytripcourse-231508.firebaseio.com",
+    "project_id": "mytripcourse-231508",
+    "storage_bucket": "mytripcourse-231508.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6081345432:android:c57c3f69b9fe66d0",
+        "android_client_info": {
+          "package_name": "goldmoon.MyTripCourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6081345432-af2qhk9v8uqoe0aiktbgjd020et0fnup.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "goldmoon.MyTripCourse",
+            "certificate_hash": "0dc4d12ccefe2a830f89789d8ff7efc72f3fc779"
+          }
+        },
+        {
+          "client_id": "6081345432-pq6k8f9vmg4mk325om6ug8nu18l6er52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEBzl1ywj9u3NBaPJwA4ZeT4zcPPGdVNE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6081345432-pq6k8f9vmg4mk325om6ug8nu18l6er52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
