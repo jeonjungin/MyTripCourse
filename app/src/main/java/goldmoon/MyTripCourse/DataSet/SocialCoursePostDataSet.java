@@ -12,6 +12,7 @@ public class SocialCoursePostDataSet {
     private String stopTime;
     private String mainImg;
     private String writerUid;
+    private String writerNick;
     private String postKey;
     private double distance;
     private int like;
@@ -23,6 +24,7 @@ public class SocialCoursePostDataSet {
     public void setCourseListDataSets(ArrayList<CourseListDataSet> courseListDataSets) {
         this.courseListDataSets = courseListDataSets;
     }
+
 
     public String getCourseName() {
         return courseName;
@@ -94,6 +96,14 @@ public class SocialCoursePostDataSet {
 
     public void setPostKey(String postKey) {
         this.postKey = postKey;
+    }
+
+    public String getWriterNick() {
+        return writerNick;
+    }
+
+    public void setWriterNick(String writerNick) {
+        this.writerNick = writerNick;
     }
 
     @Override

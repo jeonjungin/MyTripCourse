@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthRegistrar;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -45,17 +46,18 @@ public class SocialCoursePostsAdapter extends RecyclerView.Adapter<SocialCourseP
     ArrayList<SocialCoursePostDataSet> datas;
     ArrayList<String>keys;
     Context mContext;
-    String nickName;
+    String cNickName;
     DatabaseReference fbDbRef;
     FirebaseUser fbUser;
     String fbUserUid;
 
 
 
-    SocialCoursePostsAdapter(Context mContext, ArrayList<SocialCoursePostDataSet> datas,ArrayList<String> keys, String nickName){
+
+    SocialCoursePostsAdapter(Context mContext, ArrayList<SocialCoursePostDataSet> datas,ArrayList<String> keys, String cNickName){
         this.mContext=mContext;
         this.datas=datas;
-        this.nickName=nickName;
+        this.cNickName=cNickName;
         this.keys=keys;
         fbDbRef= FirebaseDatabase.getInstance().getReference();
         fbUser= FirebaseAuth.getInstance().getCurrentUser();
@@ -75,6 +77,7 @@ public class SocialCoursePostsAdapter extends RecyclerView.Adapter<SocialCourseP
         TextView tv_social_course_posts_row_period;
         TextView tv_social_course_posts_row_distance;
         TextView tv_social_course_posts_row_comment_my_nick;
+        TextView tv_social_course_posts_row_writer;
         EditText et_social_course_posts_row_comment_edit;
         ImageView iv_social_course_posts_row_comment_submit;
         ImageView iv_social_course_posts_row_delete_btn;
@@ -95,6 +98,7 @@ public class SocialCoursePostsAdapter extends RecyclerView.Adapter<SocialCourseP
             iv_social_course_posts_row_comment_submit=itemView.findViewById(R.id.social_course_posts_row_comment_submit);
             li_social_course_posts_row_info=itemView.findViewById(R.id.social_course_posts_row_info);
             iv_social_course_posts_row_delete_btn=itemView.findViewById(R.id.social_course_posts_row_delete_btn);
+            tv_social_course_posts_row_writer=itemView.findViewById(R.id.social_course_posts_row_writer);
 
 
 
@@ -142,8 +146,9 @@ public class SocialCoursePostsAdapter extends RecyclerView.Adapter<SocialCourseP
 
         mViewHolder.tv_social_course_posts_row_period.setText(datas.get(position).getStartTime()+" ~ "+datas.get(position).getStopTime());
         mViewHolder.tv_social_course_posts_row_course_name.setText(datas.get(position).getCourseName());
+        mViewHolder.tv_social_course_posts_row_writer.setText(datas.get(position).getWriterNick());
         mViewHolder.tv_social_course_posts_row_distance.setText(String.format("%.2f",datas.get(position).getDistance())+ " km");
-        mViewHolder.tv_social_course_posts_row_comment_my_nick.setText(nickName);
+        mViewHolder.tv_social_course_posts_row_comment_my_nick.setText(cNickName);
 
         //게시물 삭제버튼
         if(datas.get(position).getWriterUid().equals(fbUserUid)){
@@ -250,7 +255,7 @@ public class SocialCoursePostsAdapter extends RecyclerView.Adapter<SocialCourseP
                             SocialCoursePostCommentDataSet commentDataSet=new SocialCoursePostCommentDataSet();
                             commentDataSet.setComment(myComment);
                             commentDataSet.setCommentTime(commentTimeStr);
-                            commentDataSet.setUserNick(nickName);
+                            commentDataSet.setUserNick(cNickName);
 
                             mViewHolder.et_social_course_posts_row_comment_edit.setText("");
 

@@ -212,6 +212,7 @@ public class RewindCourseTrackingActivity extends AppCompatActivity implements V
                 sendData.setStartTime(courseData.getStartTime());
                 sendData.setStopTime(courseData.getStopTime());
                 sendData.setWriterUid(fbUserUid);
+                sendData.setWriterNick(fbUser.getDisplayName());
 
                 Date postTimeDate=new Date(System.currentTimeMillis());
                 SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault());

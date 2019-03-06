@@ -43,7 +43,7 @@ public class SocialCoursePostsActivity extends AppCompatActivity implements View
     DatabaseReference fbDatabaseReference;
     FirebaseUser fbUser;
     String fbUserUid;
-    String nickName;
+    String cNickName;   //댓글에 달릴 내 닉네임
     ArrayList<String> getKeys;
 
 
@@ -61,14 +61,14 @@ public class SocialCoursePostsActivity extends AppCompatActivity implements View
 
 
         fbUser= FirebaseAuth.getInstance().getCurrentUser();
-        nickName=fbUser.getDisplayName();
+        cNickName=fbUser.getDisplayName();
         fbUserUid=fbUser.getUid();
 
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         social_course_posts_list_view.setLayoutManager(linearLayoutManager);
-        adapter=new SocialCoursePostsAdapter(this, postDataSets,getKeys,nickName);
+        adapter=new SocialCoursePostsAdapter(this, postDataSets,getKeys,cNickName);
         social_course_posts_list_view.setAdapter(adapter);
 
 
